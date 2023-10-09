@@ -10,21 +10,30 @@ import java.util.*;
 class Main {
     static void printFromListEveryNSeconds(ArrayList<String> strList, int n) {
         long current = System.currentTimeMillis(); 
-        for (int i = 0; i < strList.size(); i += 1) {
-            if (System.currentTimeMillis() - current >= n * 1000) {
-            System.out.println(strList.get(i) + " ");
-            current = System.currentTimeMillis(); 
+        int i = 0; 
+        while (true) {
+          if (System.currentTimeMillis() - current >= n * 1000) {
+              System.out.println(strList.get(i));          
+              current = System.currentTimeMillis(); 
+              i += 1; 
+            if (i >= strList.size()) {
+              break; 
             }
+          }
         }
     }
-
     public static void main(String[] args) {
         int n = 5; 
         ArrayList<String> strList = new ArrayList<String>(); 
         strList.add("I"); 
         strList.add("am"); 
-        strList.add("stupid"); 
+        strList.add("stupid");
+        strList.add ("and"); 
+        strList.add("my"); 
+        strList.add("brain"); 
+        strList.add("is"); 
+        strList.add("still"); 
+        strList.add("growing"); 
         printFromListEveryNSeconds(strList, n);  
     }
-    
 }
