@@ -14,7 +14,7 @@ class Parallelogram implements Shape{
     }
     @Override
     public double getPerimeter() {
-        double sideA = mHeight * Math.sin(mAngle); 
+        double sideA = mHeight / Math.sin(mAngle); 
         return 2 * sideA + 2 * mWidth; 
     }
     @Override

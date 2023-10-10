@@ -13,10 +13,10 @@ class Main {
     public int getNumOfEdges(); 
     public int getNumOfCorners(); */
         for (Shape shape: shapes) {
-            shape.getArea(); 
-            shape.getPerimeter(); 
-            shape.getNumOfEdges(); 
-            shape.getNumOfCorners();
+            System.out.println(shape.getArea()); 
+            System.out.println(shape.getPerimeter()); 
+            System.out.println(shape.getNumOfEdges()); 
+            System.out.println(shape.getNumOfCorners());
         }
     }//main
 }//Main
