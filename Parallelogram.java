@@ -1,10 +1,12 @@
 class Parallelogram implements Shape{
     private double mHeight; 
     private double mWidth; 
+    private int mAngle; 
 
-    public Parallelogram(double height, double width) {
+    public Parallelogram(double height, double width, int angle) {
         mHeight = height; 
         mWidth = width; 
+        mAngle = angle; 
     }
     @Override
     public double getArea() {
@@ -12,10 +14,8 @@ class Parallelogram implements Shape{
     }
     @Override
     public double getPerimeter() {
-        double hypotenuse; 
-        hypotenuse = mHeight * mHeight + mWidth * mWidth;  
-        hypotenuse = Math.sqrt(hypotenuse); 
-        return hypotenuse + mWidth + hypotenuse + mWidth;  
+        double sideA = mHeight * Math.sin(mAngle); 
+        return 2 * sideA + 2 * mWidth; 
     }
     @Override
     public int getNumOfEdges() {

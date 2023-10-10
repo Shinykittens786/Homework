@@ -3,7 +3,7 @@ class Main {
     public static void main (String[] args) {
         List<Shape> shapes = new ArrayList<Shape>();
         shapes.add (new RightAngledTriange(4.0, 3.0)); // Hypotenuse should be 5.
-        shapes.add(new Parallelogram(4.0, 3.0)); 
+        shapes.add(new Parallelogram(4.0, 3.0, 40)); 
         shapes.add(new EquilateralTriangle(3.0, 3.0));
         shapes.add(new Circle(5.0)); 
         shapes.add(new Square(3.0, 3.0)); 
