@@ -12,46 +12,47 @@ import java.util.*;
 import java.util.function.Supplier; 
 class GhettoChatBot {
     
-    private List <String> xQuestions; 
-    private List <String> xAnswers; 
+    private List <String> mQuestions; 
+    private List <String> mAnswers; 
 
     public GhettoChatBot() {
-        ArrayList <String> questions = new ArrayList <String>(); 
-        ArrayList <String> answers = new ArrayList <String>(); 
+        mQuestions = new ArrayList <String>(); 
+        mAnswers = new ArrayList <String>(); 
     }
 
     public GhettoChatBot(List <String> questions, List <String> answers ) {
-        questions.add("Do you know the song Double, Double, Toil and Trouble?");
-        questions.add("What is your name?"); 
-        questions.add("What are you?"); 
-        questions.add("What do you eat?"); 
-        questions.add("Do you sleep?");
-        questions.add("Why are you so dumb and limited?"); 
-        answers.add("Yes I do! I will build a program to synchronize the lyrics to a song later on *cough cough question 3*"); 
-        answers.add("Hey! I'm Albus :)"); 
-        answers.add("I'm a program designed by the wizards to fool ismple muggle minds with the mere powers of AI and machine learning. I'm really just a simple program."); 
-        answers.add("I dine on electricity, bytecode, and tasty morsels of Bertie Bott's every flavour beans. I love their motor oil flavouring :D"); 
-        answers.add("I am a program, so no, I do not sleep."); 
-        answers.add(">:( I am not dumb, nor limited. Me thinks you are a muggle.");
+        GhettoChatBot();
         
-        xQuestions = questions;
-        xAnswers = answers;
+        for (String s : questions) {
+            mQuestions.add(s);
+        }
+
+        for (String s : answers) {
+            mAnswers.add(s);
+        }
     }
 
-    //public GhettoChatBot(String[] yquestions, String[] yanswers) {
-      //  yQuestions = yquestions;
-        //yAnswers = yanswers;
-    //}
+    public GhettoChatBot(String[] questions, String[] answers) {
+        GhettoChatBot();
+        
+        for (String s : questions) {
+            mQuestions.add(s);
+        }
+
+        for (String s : answers) {
+            mAnswers.add(s);
+        }
+    }
 
     public void addQuestionAndAnswer(String question, String answer) {
-        xQuestions.add(question); 
-        xAnswers.add(answer); 
+        mQuestions.add(question); 
+        mAnswers.add(answer); 
     }
 
     public String askQuestion(String question) {
-        for (int i = 0; i < xQuestions.size(); i += 1) {
-            if (question == xQuestions.get(i)) {
-                return xAnswers.get(i); 
+        for (int i = 0; i < mQuestions.size(); i += 1) {
+            if (question == mQuestions.get(i)) {
+                return mAnswers.get(i); 
             }
         }
         return("Sorry, I can't answer that question! It is beyond my ability as a very basic AI machine.");
