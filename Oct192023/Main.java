@@ -49,7 +49,7 @@ import java.util.*;
 import java.util.function.Supplier; 
 class Main {
     public static void main(String[] args) {
-        ArrayList <String> questions = new ArrayList <String>(); 
+       /* ArrayList <String> questions = new ArrayList <String>(); 
         ArrayList <String> answers = new ArrayList <String>(); 
       
         questions.add("Do you know the song Double, Double, Toil and Trouble?");
@@ -63,10 +63,12 @@ class Main {
         answers.add("I'm a program designed by the wizards to fool ismple muggle minds with the mere powers of AI and machine learning. I'm really just a simple program."); 
         answers.add("I dine on electricity, bytecode, and tasty morsels of Bertie Bott's every flavour beans. I love their motor oil flavouring :D"); 
         answers.add("I am a program, so no, I do not sleep."); 
-        answers.add(">:( I am not dumb, nor limited. Me thinks you are a muggle.");
+        answers.add(">:( I am not dumb, nor limited. Me thinks you are a muggle.");*/
         
       
-      
+        ArrayList <String> questions = new ArrayList <String>(); 
+        ArrayList <String> answers = new ArrayList <String>(); 
+
       GhettoChatBot Albus = new GhettoChatBot(questions, answers);
         System.out.println(Albus.askQuestion("What is your name?")); 
         System.out.println(Albus.askQuestion("What do you eat?"));
