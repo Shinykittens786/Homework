@@ -11,7 +11,7 @@ When you've implemented the method, make an interactive program out of GhettoCha
 import java.util.*; 
 import java.util.function.Supplier; 
 class GhettoChatBot {
-    
+
     private List <String> mQuestions; 
     private List <String> mAnswers; 
 
@@ -21,8 +21,8 @@ class GhettoChatBot {
     }
 
     public GhettoChatBot(List <String> questions, List <String> answers ) {
-        GhettoChatBot();
-        
+        this();
+
         for (String s : questions) {
             mQuestions.add(s);
         }
@@ -33,8 +33,8 @@ class GhettoChatBot {
     }
 
     public GhettoChatBot(String[] questions, String[] answers) {
-        GhettoChatBot();
-        
+        this();
+
         for (String s : questions) {
             mQuestions.add(s);
         }
