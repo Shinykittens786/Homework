@@ -8,9 +8,9 @@ The following public methods should be implemented:
    void addQuestionAndAnswer(String question, String answer) -> Adds a new question that the GhettoChatBot can answer.
    String askQuestion(String question) -> If the GhettoChatBot can answer the question, it does. If not, it says "Sorry, I do not understand the question."
 When you've implemented the method, make an interactive program out of GhettoChatBot. Be creative.*/
-import java.util.*; 
+/*import java.util.*; 
 import java.util.function.Supplier; 
-class GhettoChatBot {
+/*class GhettoChatBot {
     
     private List <String> mQuestions; 
     private List <String> mAnswers; 
@@ -21,7 +21,7 @@ class GhettoChatBot {
     }
 
     public GhettoChatBot(List <String> questions, List <String> answers ) {
-        GhettoChatBot();
+        this();
         
         for (String s : questions) {
             mQuestions.add(s);
@@ -33,7 +33,7 @@ class GhettoChatBot {
     }
 
     public GhettoChatBot(String[] questions, String[] answers) {
-        GhettoChatBot();
+        this();
         
         for (String s : questions) {
             mQuestions.add(s);
@@ -58,3 +58,4 @@ class GhettoChatBot {
         return("Sorry, I can't answer that question! It is beyond my ability as a very basic AI machine.");
     } 
 }
+*/
