@@ -10,8 +10,13 @@ The following public methods should be implemented:
 When you've implemented the method, make an interactive program out of GhettoChatBot. Be creative.*/
 /*import java.util.*; 
 import java.util.function.Supplier; 
+<<<<<<< HEAD
 /*class GhettoChatBot {
     
+=======
+class GhettoChatBot {
+
+>>>>>>> e02025a39bbd3238ceaf63b976ac281590b5dfbb
     private List <String> mQuestions; 
     private List <String> mAnswers; 
 
@@ -22,7 +27,11 @@ import java.util.function.Supplier;
 
     public GhettoChatBot(List <String> questions, List <String> answers ) {
         this();
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> e02025a39bbd3238ceaf63b976ac281590b5dfbb
         for (String s : questions) {
             mQuestions.add(s);
         }
@@ -34,7 +43,11 @@ import java.util.function.Supplier;
 
     public GhettoChatBot(String[] questions, String[] answers) {
         this();
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> e02025a39bbd3238ceaf63b976ac281590b5dfbb
         for (String s : questions) {
             mQuestions.add(s);
         }

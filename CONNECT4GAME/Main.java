@@ -7,31 +7,29 @@ class Main {
             for (int i = 0;; i += 1) {
                 if (myGame.getGameResult() == 1) {
                     System.out.println("Player Red has won!"); 
+                    myGame.printGameState();
                     break; 
                 }
                 
-                if (myGame.getGameResult() == 2) {
+                else if (myGame.getGameResult() == 2) {
                     System.out.println("Player Yellow has won!"); 
+                    myGame.printGameState();
                     break;
                 }
 
-                if (myGame.getGameResult() == 0) {
+                else if (myGame.getGameResult() == 0) {
                     System.out.println("Game is still in progress");
                 }
             myGame.printGameState(); 
             myGame.getGameResult(); 
-            System.out.println("Player Red's turn: Place a red token by entering a coordinate:");
-            int row = scanner.nextInt(); 
-            System.out.println("Please enter the second coordinate:"); 
+            System.out.println("Player Red's turn: Place a red token by entering the column you want to place:");
             int col = scanner.nextInt(); 
-            myGame.playRed(row, col); 
+            myGame.playRed(col); 
             myGame.printGameState(); 
             myGame.getGameResult(); 
-            System.out.println("Player 2's turn: Place a yellow token by entering a coordinate: ");
-            row = scanner.nextInt(); 
-            System.out.println("Please enter the second coordinate:"); 
+            System.out.println("Player 2's turn: Place a yellow token by entering the column you want to place: ");
             col = scanner.nextInt(); 
-            myGame.playYellow(row, col);
+            myGame.playYellow(col);
             }
     }
 }

@@ -5,18 +5,22 @@ class Connect4 {
         mArr = new char[][] {{' ', ' ', ' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' ', ' ', ' '}};
         }
 
-    public boolean playRed(int row, int col) {
-        if (mArr[row][col] == ' ') {
-            mArr[row][col] = 'R'; 
-            return true; 
+    public boolean playRed(int col) {
+        for (int i = 5; i >= 0; i -= 1) {
+            if (mArr[i][col] == ' ') {
+                mArr[i][col] = 'R'; 
+                return true; 
+            } else {}
         }
         return false; 
     }
 
-    public boolean playYellow(int row, int col) {
-        if (mArr[row][col] == ' ') {
-            mArr[row][col] = 'Y'; 
-            return true; 
+    public boolean playYellow(int col) {
+        for (int i = 5; i >= 0; i -= 1) {
+            if (mArr[i][col] == ' ') {
+                mArr[i][col] = 'Y'; 
+                return true; 
+            } else {}
         }
         return false; 
     }
@@ -44,6 +48,42 @@ class Connect4 {
                     return 2;
                 }
             }
+        }
+
+        for (int i = 0; i < 6 - 4; i += 1) {
+            for (int k = 0; k < 7; k += 1) {
+                if (mArr[i][k] == 'R' && mArr[i + 1][k] == 'R' && mArr[i + 2][k] == 'R' && mArr[i + 3][k] == 'R') {
+                    return 1; 
+                }
+
+                if (mArr[i][k] == 'Y' && mArr[i + 1][k] == 'Y' && mArr[i + 2][k] == 'Y' && mArr[i + 3][k] == 'Y') {
+                    return 2;
+                }
+            }
+        }
+
+        for (int i = 0; i < 6 - 4; i += 1) {
+            for (int k = 0; k < 7 - 4; k += 1) {
+                if (mArr[i][k] == 'R' && mArr[i + 1][k + 1] == 'R' && mArr[i + 2][k + 2] == 'R' && mArr[i + 3][k + 3] == 'R') {
+                    return 1;
+                }
+
+                if (mArr[i][k] == 'Y' && mArr[i + 1][k + 1] == 'Y' && mArr[i + 2][k + 2] == 'Y' && mArr[i + 3][k + 3] == 'Y') {
+                    return 2; 
+                }
+            }
+        }
+
+        for (int i = 0; i < 6 - 4; i += 1) {
+            for (int k = 6; k > 0 + 4; k -= 1) {
+                if (mArr[i][k] == 'R' && mArr[i + 1][k - 1] == 'R' && mArr[i + 2][k - 2] == 'R' && mArr[i + 3][k - 3] == 'R') {
+                    return 1; 
+                }
+
+                if (mArr[i][k] == 'R' && mArr[i + 1][k - 1] == 'R' && mArr[i + 2][k - 2] == 'R' && mArr[i + 3][k - 3] == 'R') {
+                    return 2; 
+                }
+            }
         } return 0; 
     }
-} 
+}
