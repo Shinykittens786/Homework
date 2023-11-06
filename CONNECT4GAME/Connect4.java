@@ -74,8 +74,8 @@ class Connect4 {
             }
         }
 
-        for (int i = 0; i < 6 - 4; i += 1) {
-            for (int k = 6; k > 0 + 4; k -= 1) {
+        for (int i = 0; i <= 2; i += 1) {
+            for (int k = 6; k >= 3; k -= 1) {
                 if (mArr[i][k] == 'R' && mArr[i + 1][k - 1] == 'R' && mArr[i + 2][k - 2] == 'R' && mArr[i + 3][k - 3] == 'R') {
                     return 1; 
                 }
