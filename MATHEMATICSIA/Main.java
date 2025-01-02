@@ -115,10 +115,11 @@ public class Main {
                 scouter.write(String.valueOf(currentPosition)); 
                 scouter.write("\n");  
             }
+                // 
 */
 
-    PIDController integralPI = new PIDController(-0.001, -0.00396, 0, 0, 160, 0.01);
-        // Say P gets saturated. 
+    /*PIDController integralPI = new PIDController(-0.001, -0.00396, 0, 0, 160, 0.01);
+        // Say P gets saturated. FIXED P CONTROLLER WITH I
         for (int i = 0; i <= 60000; i += 1) {
             double currentPosition = doubleIntegratorSim.getCurrentPos(); 
             integralPI.updateError(currentPosition); 
@@ -130,7 +131,21 @@ public class Main {
             scouter.write(String.valueOf(doubleIntegratorSim.getCurrentVelocity())); 
             scouter.write("\n");  
         }
+        */
 
+    /*PIDController PID = new PIDController(-0.009, -0.00445, -10, 0, 160, 0.01);
+            for (int i = 0; i <= 90000; i += 1) {
+                double currentPosition = doubleIntegratorSim.getCurrentPos(); 
+                PID.updateError(currentPosition); 
+                doubleIntegratorSim.simulateVelocityAndPos(PID.getOutput());
+                scouter.write(String.valueOf(doubleIntegratorSim.getCurrentPos()));
+                scouter.write(","); 
+                scouter.write(String.valueOf(i * 0.01)); 
+                scouter.write(","); 
+                scouter.write(String.valueOf(doubleIntegratorSim.getCurrentVelocity())); 
+                scouter.write("\n");  
+            }
+            */
         /*for (int i = 0; i <= 10000; i += 1) {
             scouter.write(String.valueOf(integralPI.getOutput()));
             scouter.write(","); 
